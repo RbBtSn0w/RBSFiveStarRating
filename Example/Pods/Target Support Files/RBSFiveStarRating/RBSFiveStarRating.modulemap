@@ -1,0 +1,6 @@
+framework module RBSFiveStarRating {
+  umbrella header "RBSFiveStarRating-umbrella.h"
+
+  export *
+  module * { export * }
+}

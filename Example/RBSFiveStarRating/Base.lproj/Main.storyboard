@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="whP-gf-Uak">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="whP-gf-Uak">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,12 +20,40 @@
                     <view key="view" contentMode="scaleToFill" id="TpU-gO-2f1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.10000000000000001" minValue="-1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="7DD-GH-tAP">
+                                <rect key="frame" x="33" y="543" width="309" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="0oM-zM-pXw"/>
+                                    <constraint firstAttribute="width" constant="305" id="tzZ-ph-vvh"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="updateValue:" destination="whP-gf-Uak" eventType="valueChanged" id="hk6-YS-2xV"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z3d-ip-fg7">
+                                <rect key="frame" x="182" y="514" width="11" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7DD-GH-tAP" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="Quu-B1-Yjy"/>
+                            <constraint firstItem="Mvr-aV-6Um" firstAttribute="top" secondItem="7DD-GH-tAP" secondAttribute="bottom" constant="95" id="YRV-gN-5bJ"/>
+                            <constraint firstItem="z3d-ip-fg7" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="cLT-5F-NIy"/>
+                            <constraint firstItem="7DD-GH-tAP" firstAttribute="firstBaseline" secondItem="z3d-ip-fg7" secondAttribute="baseline" constant="12.5" symbolType="layoutAnchor" id="lkQ-gl-zxb"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="slider" destination="7DD-GH-tAP" id="wgn-2p-svU"/>
+                        <outlet property="valueLabel" destination="z3d-ip-fg7" id="ruY-le-ui7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="433"/>
+            <point key="canvasLocation" x="304.80000000000001" y="432.23388305847078"/>
         </scene>
     </scenes>
 </document>

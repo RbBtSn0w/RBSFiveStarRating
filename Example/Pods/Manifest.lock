@@ -1,0 +1,18 @@
+PODS:
+  - RBSFiveStarRating (0.1.0)
+
+DEPENDENCIES:
+  - RBSFiveStarRating (from `../`)
+
+EXTERNAL SOURCES:
+  RBSFiveStarRating:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  RBSFiveStarRating: e657fabf69106c9308f65444e6d20731ea57cefd
+
+PODFILE CHECKSUM: 745a3207c5eb2773159f1d566980adc12821a7b7
+
+COCOAPODS: 1.7.5
+
+COCOAPODS DEPLOY: 0.0.11
