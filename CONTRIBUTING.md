@@ -48,22 +48,21 @@ This project uses [Tuist](https://tuist.io) for project generation and dependenc
 1. Fork the repository
 2. Clone your fork: `git clone https://github.com/YOUR_USERNAME/RBSFiveStarRating.git`
 3. Navigate to the project directory: `cd RBSFiveStarRating`
-4. Install Mise (if not already installed): `curl https://mise.run | sh`
-5. Install Tuist: `mise install tuist@latest`
-6. Generate the Xcode project: `mise x tuist -- tuist generate`
+4. Install Tuist: `curl -Ls https://install.tuist.io | bash`
+5. Generate the Xcode project: `tuist generate`
 
 The generated Xcode project will open automatically.
 
 ## Running Tests
 
 ```bash
-mise x tuist -- tuist test
+tuist test
 ```
 
 Or using xcodebuild after generating the project:
 
 ```bash
-mise x tuist -- tuist generate --no-open
+tuist generate --no-open
 xcodebuild test \
   -project RBSFiveStarRating.xcodeproj \
   -scheme RBSFiveStarRating-Tests \

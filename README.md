@@ -18,18 +18,15 @@ A customizable five-star rating view component for iOS.
 To run the example project:
 
 ```bash
-# Install Mise (package manager)
-curl https://mise.run | sh
-
 # Install Tuist
-mise install tuist@latest
+curl -Ls https://install.tuist.io | bash
 
 # Clone the repo
 git clone https://github.com/RbBtSn0w/RBSFiveStarRating.git
 cd RBSFiveStarRating
 
 # Generate and open the project
-mise x tuist -- tuist generate
+tuist generate
 ```
 
 ## Requirements
@@ -71,28 +68,28 @@ This project uses [Tuist](https://tuist.io) for project generation and dependenc
 ### Setup
 
 ```bash
-# Install Mise
-curl https://mise.run | sh
+# Install Tuist
+curl -Ls https://install.tuist.io | bash
 
-# Install dependencies
-mise install
+# Install dependencies (if any)
+tuist install
 
 # Generate Xcode project
-mise x tuist -- tuist generate
+tuist generate
 ```
 
 ### Building
 
 ```bash
 # Build the project
-mise x tuist -- tuist build
+tuist build
 ```
 
 ### Testing
 
 ```bash
 # Run tests
-mise x tuist -- tuist test
+tuist test
 ```
 
 ## Contributing

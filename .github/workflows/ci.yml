@@ -20,19 +20,13 @@ jobs:
       with:
         xcode-version: latest-stable
     
-    - name: Install Mise (for Tuist)
-      run: |
-        curl https://mise.run | sh
-        echo "$HOME/.local/bin" >> $GITHUB_PATH
-        
     - name: Install Tuist
       run: |
-        mise install tuist@latest
-        mise use tuist@latest
+        curl -Ls https://install.tuist.io | bash
         
     - name: Generate Project with Tuist
       run: |
-        mise x tuist@latest -- tuist generate --no-open
+        tuist generate --no-open
         
     - name: Build Example Project
       run: |
