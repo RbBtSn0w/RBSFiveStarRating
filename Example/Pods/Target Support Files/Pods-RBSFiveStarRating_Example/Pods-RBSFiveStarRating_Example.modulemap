@@ -1,6 +1,0 @@
-framework module Pods_RBSFiveStarRating_Example {
-  umbrella header "Pods-RBSFiveStarRating_Example-umbrella.h"
-
-  export *
-  module * { export * }
-}

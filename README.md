@@ -1,9 +1,8 @@
 # RBSFiveStarRating
 
 [![CI Status](https://img.shields.io/github/actions/workflow/status/RbBtSn0w/RBSFiveStarRating/ci.yml?branch=master)](https://github.com/RbBtSn0w/RBSFiveStarRating/actions)
-[![Version](https://img.shields.io/cocoapods/v/RBSFiveStarRating.svg?style=flat)](https://cocoapods.org/pods/RBSFiveStarRating)
-[![License](https://img.shields.io/cocoapods/l/RBSFiveStarRating.svg?style=flat)](https://cocoapods.org/pods/RBSFiveStarRating)
-[![Platform](https://img.shields.io/cocoapods/p/RBSFiveStarRating.svg?style=flat)](https://cocoapods.org/pods/RBSFiveStarRating)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/RbBtSn0w/RBSFiveStarRating/blob/master/LICENSE)
+[![Platform](https://img.shields.io/badge/platform-iOS-lightgrey.svg)](https://github.com/RbBtSn0w/RBSFiveStarRating)
 
 A customizable five-star rating view component for iOS.
 
@@ -17,8 +16,6 @@ A customizable five-star rating view component for iOS.
 ## Example
 
 To run the example project:
-
-### Using Tuist (Recommended)
 
 ```bash
 # Install Mise (package manager)
@@ -35,20 +32,6 @@ cd RBSFiveStarRating
 mise x tuist -- tuist generate
 ```
 
-### Using CocoaPods (Legacy)
-
-```bash
-# Clone the repo
-git clone https://github.com/RbBtSn0w/RBSFiveStarRating.git
-cd RBSFiveStarRating/Example
-
-# Install dependencies
-pod install
-
-# Open workspace
-open RBSFiveStarRating.xcworkspace
-```
-
 ## Requirements
 
 - iOS 12.0+
@@ -56,17 +39,15 @@ open RBSFiveStarRating.xcworkspace
 
 ## Installation
 
-### CocoaPods
+### Swift Package Manager (Coming Soon)
 
-RBSFiveStarRating is available through [CocoaPods](https://cocoapods.org). To install it, simply add the following line to your Podfile:
+Swift Package Manager support is planned for a future release.
 
-```ruby
-pod 'RBSFiveStarRating'
-```
+### Manual Installation
 
-### Swift Package Manager
-
-Coming soon!
+1. Download or clone the repository
+2. Copy the `RBSFiveStarRating/Classes` and `RBSFiveStarRating/Assets` folders to your project
+3. Add the files to your Xcode project
 
 ## Usage
 

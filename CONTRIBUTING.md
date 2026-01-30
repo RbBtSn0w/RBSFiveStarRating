@@ -54,17 +54,7 @@ This project uses [Tuist](https://tuist.io) for project generation and dependenc
 
 The generated Xcode project will open automatically.
 
-### Legacy CocoaPods Setup
-
-If you prefer to use CocoaPods (legacy):
-
-1. Navigate to the Example directory: `cd Example`
-2. Install dependencies: `pod install`
-3. Open the workspace: `open RBSFiveStarRating.xcworkspace`
-
 ## Running Tests
-
-### Using Tuist (Recommended)
 
 ```bash
 mise x tuist -- tuist test
@@ -79,17 +69,6 @@ xcodebuild test \
   -scheme RBSFiveStarRating-Tests \
   -sdk iphonesimulator \
   -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest'
-```
-
-### Using CocoaPods (Legacy)
-
-```bash
-cd Example
-xcodebuild test \
-  -workspace RBSFiveStarRating.xcworkspace \
-  -scheme RBSFiveStarRating-Example \
-  -sdk iphonesimulator \
-  -destination 'platform=iOS Simulator,name=iPhone 14,OS=latest'
 ```
 
 ## Coding Style
