@@ -2,8 +2,8 @@
 # * https://www.objc.io/issues/6-build-tools/travis-ci/
 # * https://github.com/supermarin/xcpretty#usage
 
-# Note: GitHub Actions is now the primary CI system for this project.
-# This Travis CI configuration is maintained for compatibility.
+# Note: GitHub Actions with Tuist is now the primary CI system for this project.
+# This Travis CI configuration is maintained for legacy CocoaPods compatibility.
 
 osx_image: xcode14.2
 language: objective-c

@@ -19,6 +19,12 @@ DerivedData
 *.hmap
 *.ipa
 
+# Tuist
+.tuist
+*.xcodeproj
+*.xcworkspace
+Derived/
+
 # Bundler
 .bundle
 

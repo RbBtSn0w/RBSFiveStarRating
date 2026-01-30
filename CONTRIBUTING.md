@@ -43,13 +43,45 @@ Enhancement suggestions are tracked as GitHub issues. When creating an enhanceme
 
 ## Development Setup
 
+This project uses [Tuist](https://tuist.io) for project generation and dependency management.
+
 1. Fork the repository
 2. Clone your fork: `git clone https://github.com/YOUR_USERNAME/RBSFiveStarRating.git`
-3. Navigate to the Example directory: `cd RBSFiveStarRating/Example`
-4. Install dependencies: `pod install`
-5. Open the workspace: `open RBSFiveStarRating.xcworkspace`
+3. Navigate to the project directory: `cd RBSFiveStarRating`
+4. Install Mise (if not already installed): `curl https://mise.run | sh`
+5. Install Tuist: `mise install tuist@latest`
+6. Generate the Xcode project: `mise x tuist -- tuist generate`
+
+The generated Xcode project will open automatically.
+
+### Legacy CocoaPods Setup
+
+If you prefer to use CocoaPods (legacy):
+
+1. Navigate to the Example directory: `cd Example`
+2. Install dependencies: `pod install`
+3. Open the workspace: `open RBSFiveStarRating.xcworkspace`
 
 ## Running Tests
+
+### Using Tuist (Recommended)
+
+```bash
+mise x tuist -- tuist test
+```
+
+Or using xcodebuild after generating the project:
+
+```bash
+mise x tuist -- tuist generate --no-open
+xcodebuild test \
+  -project RBSFiveStarRating.xcodeproj \
+  -scheme RBSFiveStarRating-Tests \
+  -sdk iphonesimulator \
+  -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest'
+```
+
+### Using CocoaPods (Legacy)
 
 ```bash
 cd Example
