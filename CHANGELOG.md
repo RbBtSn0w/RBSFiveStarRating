@@ -9,8 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - **Tuist support for modern iOS project management** - The project now uses Tuist for Xcode project generation and dependency management
-- `.mise.toml` configuration for version management
 - `Project.swift` manifest for Tuist project definition
+- `Tuist/Config.swift` configuration
 - GitHub Actions CI/CD workflow for automated builds and tests using Tuist
 - CHANGELOG.md for tracking version changes
 - CONTRIBUTING.md with guidelines for contributors
@@ -24,6 +24,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated .gitignore to include Tuist-specific patterns
 - Modernized project structure for better open source collaboration
 - Updated minimum iOS deployment target to 12.0 for better compatibility
+- **CI now uses Homebrew to install Tuist** for better reliability
 
 ### Removed
 - **CocoaPods support** - Removed Podfile, Podspec, and all CocoaPods-related files
@@ -32,9 +33,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - Improved CI/CD pipeline reliability with Tuist-based builds
+- **Fixed CI Tuist installation** - Switched to Homebrew installation (more stable than web installer)
 
 ### Migration Notes
-- **For developers**: Use Tuist - Install with `mise install tuist@latest` and run `mise x tuist -- tuist generate`
+- **For developers**: Install Tuist via Homebrew: `brew install tuist`, then run `tuist generate`
 - The generated Xcode project (`.xcodeproj`) is now ignored in git as Tuist generates it from `Project.swift`
 - CocoaPods is no longer supported - all development should use Tuist
 

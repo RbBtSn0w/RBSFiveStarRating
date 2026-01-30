@@ -48,7 +48,7 @@ This project uses [Tuist](https://tuist.io) for project generation and dependenc
 1. Fork the repository
 2. Clone your fork: `git clone https://github.com/YOUR_USERNAME/RBSFiveStarRating.git`
 3. Navigate to the project directory: `cd RBSFiveStarRating`
-4. Install Tuist: `curl -Ls https://install.tuist.io | bash`
+4. Install Tuist via Homebrew: `brew install tuist`
 5. Generate the Xcode project: `tuist generate`
 
 The generated Xcode project will open automatically.

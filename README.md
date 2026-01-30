@@ -18,8 +18,8 @@ A customizable five-star rating view component for iOS.
 To run the example project:
 
 ```bash
-# Install Tuist
-curl -Ls https://install.tuist.io | bash
+# Install Tuist via Homebrew
+brew install tuist
 
 # Clone the repo
 git clone https://github.com/RbBtSn0w/RBSFiveStarRating.git
@@ -68,11 +68,8 @@ This project uses [Tuist](https://tuist.io) for project generation and dependenc
 ### Setup
 
 ```bash
-# Install Tuist
-curl -Ls https://install.tuist.io | bash
-
-# Install dependencies (if any)
-tuist install
+# Install Tuist via Homebrew
+brew install tuist
 
 # Generate Xcode project
 tuist generate
