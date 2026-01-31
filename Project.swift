@@ -57,5 +57,20 @@ let project = Project(
                 .target(name: "RBSFiveStarRating-Example")
             ]
         )
+    ],
+    schemes: [
+        .scheme(
+            name: "RBSFiveStarRating-Example",
+            shared: true,
+            buildAction: .buildAction(targets: ["RBSFiveStarRating-Example"]),
+            testAction: .targets(["RBSFiveStarRating-Tests"]),
+            runAction: .runAction(configuration: .debug, executable: "RBSFiveStarRating-Example")
+        ),
+        .scheme(
+            name: "RBSFiveStarRating-Tests",
+            shared: true,
+            buildAction: .buildAction(targets: ["RBSFiveStarRating-Tests"]),
+            testAction: .targets(["RBSFiveStarRating-Tests"])
+        )
     ]
 )
