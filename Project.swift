@@ -57,5 +57,49 @@ let project = Project(
                 .target(name: "RBSFiveStarRating-Example")
             ]
         )
+    ],
+    schemes: [
+        .scheme(
+            name: "RBSFiveStarRating",
+            shared: true,
+            buildAction: .buildAction(targets: ["RBSFiveStarRating"]),
+            testAction: .targets(
+                ["RBSFiveStarRating-Tests"],
+                configuration: .debug,
+                coverage: true
+            ),
+            runAction: nil,
+            archiveAction: .archiveAction(configuration: .release),
+            profileAction: .profileAction(configuration: .release),
+            analyzeAction: .analyzeAction(configuration: .debug)
+        ),
+        .scheme(
+            name: "RBSFiveStarRating-Example",
+            shared: true,
+            buildAction: .buildAction(targets: ["RBSFiveStarRating-Example", "RBSFiveStarRating"]),
+            testAction: .targets(
+                ["RBSFiveStarRating-Tests"],
+                configuration: .debug,
+                coverage: true
+            ),
+            runAction: .runAction(configuration: .debug, executable: "RBSFiveStarRating-Example"),
+            archiveAction: .archiveAction(configuration: .release),
+            profileAction: .profileAction(configuration: .release),
+            analyzeAction: .analyzeAction(configuration: .debug)
+        ),
+        .scheme(
+            name: "RBSFiveStarRating-Tests",
+            shared: true,
+            buildAction: .buildAction(targets: ["RBSFiveStarRating-Tests", "RBSFiveStarRating-Example", "RBSFiveStarRating"]),
+            testAction: .targets(
+                ["RBSFiveStarRating-Tests"],
+                configuration: .debug,
+                coverage: true
+            ),
+            runAction: nil,
+            archiveAction: nil,
+            profileAction: nil,
+            analyzeAction: .analyzeAction(configuration: .debug)
+        )
     ]
 )
