@@ -41,7 +41,7 @@ jobs:
           xcode-version: latest-stable
     
       - name: Install Tuist
-        run: pip3 install tuist || brew install tuist
+        run: brew install tuist
 
       - name: Generate Project with Tuist
         run: tuist generate --no-open
