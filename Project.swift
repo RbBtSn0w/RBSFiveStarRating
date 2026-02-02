@@ -63,7 +63,6 @@ let project = Project(
       infoPlist: .file(path: "Example/Tests/Tests-Info.plist"),
       sources: ["Example/Tests/**/*.{h,m,swift}"],
       dependencies: [
-        .target(name: "RBSFiveStarRating"),
         .target(name: "RBSFiveStarRating-Example"),
       ],
       settings: .settings(
