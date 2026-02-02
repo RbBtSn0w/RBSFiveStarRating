@@ -19,7 +19,7 @@ let project = Project(
       deploymentTargets: .iOS("12.0"),
       infoPlist: .default,
       sources: ["RBSFiveStarRating/Classes/**"],
-      resources: ["RBSFiveStarRating/Assets/**"],
+      resources: ["RBSFiveStarRating/Assets/RBSFiveStarRating.xcassets"],
       headers: .headers(
         public: ["RBSFiveStarRating/Classes/**/*.h"]
       ),
