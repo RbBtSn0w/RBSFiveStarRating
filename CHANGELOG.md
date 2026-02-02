@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - **Tuist support for modern iOS project management** - The project now uses Tuist for Xcode project generation and dependency management
 - `Project.swift` manifest for Tuist project definition
-- `Tuist/Config.swift` configuration
+- `Tuist.swift` configuration (at root)
 - GitHub Actions CI/CD workflow for automated builds and tests using Tuist
 - CHANGELOG.md for tracking version changes
 - CONTRIBUTING.md with guidelines for contributors
