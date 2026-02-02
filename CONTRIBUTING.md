@@ -67,7 +67,7 @@ xcodebuild test \
   -workspace RBSFiveStarRating.xcworkspace \
   -scheme RBSFiveStarRating-Tests \
   -sdk iphonesimulator \
-  -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest'
+  -destination 'platform=iOS Simulator,name=iPhone 16e,OS=latest'
 ```
 
 ## Coding Style
