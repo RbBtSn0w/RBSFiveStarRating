@@ -1,5 +1,5 @@
 //
-//  RBSFiveStartRatingView.m
+//  RBSFiveStarRatingView.m
 //  RBSFiveStarRating
 //
 //  Created by Snow.y.wu on 8/17/19.
@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "RBSFiveStartRatingView.h"
+#import "RBSFiveStarRatingView.h"
 
 
 NS_ASSUME_NONNULL_BEGIN
@@ -26,13 +26,13 @@ static UIImage* RBSImageNamed(NSString*imageNamed) {
     
     UIImage *image = [UIImage imageNamed:imageNamed];
     if (!image) {
-        NSBundle *bundle = [NSBundle bundleForClass:RBSFiveStartRatingView.class];
+        NSBundle *bundle = [NSBundle bundleForClass:RBSFiveStarRatingView.class];
         image = [UIImage imageNamed:imageNamed inBundle:bundle compatibleWithTraitCollection:nil];
     }
     return image;
 }
 
-@interface RBSFiveStartRatingView ()
+@interface RBSFiveStarRatingView ()
 
 @property(nonatomic, strong) NSArray <NSString*> *requiredImageNameList;
 
@@ -41,7 +41,7 @@ static UIImage* RBSImageNamed(NSString*imageNamed) {
 
 @end
 
-@implementation RBSFiveStartRatingView
+@implementation RBSFiveStarRatingView
 
 
 // MARK:    -   Accessors

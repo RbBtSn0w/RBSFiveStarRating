@@ -34,6 +34,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Improved CI/CD pipeline reliability with Tuist-based builds
 - **Fixed CI Tuist installation** - Switched to Homebrew installation (more stable than web installer)
+- Fixed typo in `RBSFiveStarRatingView` class name (renamed from `RBSFiveStartRatingView`)
 
 ### Migration Notes
 - **For developers**: Install Tuist via Homebrew: `brew install tuist`, then run `tuist generate`

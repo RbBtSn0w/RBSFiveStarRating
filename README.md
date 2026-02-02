@@ -49,10 +49,10 @@ Swift Package Manager support is planned for a future release.
 ## Usage
 
 ```objective-c
-#import <RBSFiveStarRating/RBSFiveStartRatingView.h>
+#import <RBSFiveStarRating/RBSFiveStarRatingView.h>
 
 // Create a rating view with default configuration
-RBSFiveStartRatingView *ratingView = [[RBSFiveStartRatingView alloc] initWithFrame:CGRectMake(0, 0, 100, 20)];
+RBSFiveStarRatingView *ratingView = [[RBSFiveStarRatingView alloc] initWithFrame:CGRectMake(0, 0, 100, 20)];
 
 // Set the rating (0.0 to 5.0)
 ratingView.rating = RBS_NSDecimalNumberByString(@"4.5");

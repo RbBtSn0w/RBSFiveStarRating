@@ -1,5 +1,5 @@
 //
-//  RBSFiveStartRatingView.h
+//  RBSFiveStarRatingView.h
 //  RBSFiveStarRating
 //
 //  Created by Snow.y.wu on 8/17/19.
@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  add #define RBSFiveRatingView_LOG will open log info.
  */
-@interface RBSFiveStartRatingView : UIView
+@interface RBSFiveStarRatingView : UIView
 
 
 /**

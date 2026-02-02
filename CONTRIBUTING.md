@@ -64,7 +64,7 @@ Or using xcodebuild after generating the project:
 ```bash
 tuist generate --no-open
 xcodebuild test \
-  -project RBSFiveStarRating.xcodeproj \
+  -workspace RBSFiveStarRating.xcworkspace \
   -scheme RBSFiveStarRating-Tests \
   -sdk iphonesimulator \
   -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest'

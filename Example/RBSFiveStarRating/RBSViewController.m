@@ -7,11 +7,11 @@
 //
 
 #import "RBSViewController.h"
-#import <RBSFiveStarRating/RBSFiveStartRatingView.h>
+#import <RBSFiveStarRating/RBSFiveStarRatingView.h>
 
 @interface RBSViewController ()
-@property (nonatomic, strong) RBSFiveStartRatingView *fiveStartRatingView;
-@property (nonatomic, strong) RBSFiveStartRatingView *customfiveStartRatingView;
+@property (nonatomic, strong) RBSFiveStarRatingView *fiveStartRatingView;
+@property (nonatomic, strong) RBSFiveStarRatingView *customfiveStartRatingView;
 @property (weak, nonatomic) IBOutlet UILabel *valueLabel;
 @property (weak, nonatomic) IBOutlet UISlider *slider;
 @end
@@ -32,7 +32,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    RBSFiveStartRatingView *fiveStartRatingView = [[RBSFiveStartRatingView alloc] initWithFrame:CGRectZero];
+    RBSFiveStarRatingView *fiveStartRatingView = [[RBSFiveStarRatingView alloc] initWithFrame:CGRectZero];
     [self.view addSubview:fiveStartRatingView];
     self.fiveStartRatingView = fiveStartRatingView;
     
@@ -46,7 +46,7 @@
                                                                              [RBSFiveRatingConditionBreakInfo conditionBreakInfo:RBS_NSDecimalNumberByString(@"1.0") withImageName:@"star4"],
                                                                              ];
     
-    self.customfiveStartRatingView = [[RBSFiveStartRatingView alloc] initWithFrame:CGRectZero
+    self.customfiveStartRatingView = [[RBSFiveStarRatingView alloc] initWithFrame:CGRectZero
                                                          withRequiredImageNameList:requiredImageNameList
                                                       withIncrementConditionBreaks:incrementConditionBreaks];
     
