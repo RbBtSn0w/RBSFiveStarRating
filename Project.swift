@@ -22,6 +22,11 @@ let project = Project(
       resources: ["RBSFiveStarRating/Assets/**"],
       headers: .headers(
         public: ["RBSFiveStarRating/Classes/**/*.h"]
+      ),
+      settings: .settings(
+        base: [
+          "GCC_PREFIX_HEADER": "Example/RBSFiveStarRating/RBSFiveStarRating-Prefix.pch"
+        ]
       )
     ),
 
@@ -35,12 +40,17 @@ let project = Project(
       infoPlist: .file(path: "Example/RBSFiveStarRating/RBSFiveStarRating-Info.plist"),
       sources: ["Example/RBSFiveStarRating/**/*.{h,m,swift}"],
       resources: [
-        "Example/RBSFiveStarRating/**/*.{storyboard,xib,xcassets,strings}",
+        "Example/RBSFiveStarRating/**/*.{storyboard,xib,xcassets}",
         "Example/RBSFiveStarRating/**/*.lproj",
       ],
       dependencies: [
         .target(name: "RBSFiveStarRating")
-      ]
+      ],
+      settings: .settings(
+        base: [
+          "GCC_PREFIX_HEADER": "Example/RBSFiveStarRating/RBSFiveStarRating-Prefix.pch"
+        ]
+      )
     ),
 
     // Test Target
@@ -55,7 +65,12 @@ let project = Project(
       dependencies: [
         .target(name: "RBSFiveStarRating"),
         .target(name: "RBSFiveStarRating-Example"),
-      ]
+      ],
+      settings: .settings(
+        base: [
+          "GCC_PREFIX_HEADER": "Example/Tests/Tests-Prefix.pch"
+        ]
+      )
     ),
   ],
   schemes: [
