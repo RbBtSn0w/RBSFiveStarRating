@@ -7,11 +7,11 @@
 //
 
 #import "RBSViewController.h"
-@import RBSFiveStarRating;
+#import <RBSFiveStarRating/RBSFiveStarRatingView.h>
 
 @interface RBSViewController ()
-@property (nonatomic, strong) RBSFiveStartRatingView *fiveStartRatingView;
-@property (nonatomic, strong) RBSFiveStartRatingView *customfiveStartRatingView;
+@property (nonatomic, strong) RBSFiveStarRatingView *fiveStarRatingView;
+@property (nonatomic, strong) RBSFiveStarRatingView *customFiveStarRatingView;
 @property (weak, nonatomic) IBOutlet UILabel *valueLabel;
 @property (weak, nonatomic) IBOutlet UISlider *slider;
 @end
@@ -23,18 +23,18 @@
     NSString *strValue = @(sender.value).stringValue;
     
     self.valueLabel.text = strValue;
-    self.fiveStartRatingView.rating = RBS_NSDecimalNumberByString(strValue);
+    self.fiveStarRatingView.rating = RBS_NSDecimalNumberByString(strValue);
     
-    self.customfiveStartRatingView.rating = RBS_NSDecimalNumberByString(strValue);
+    self.customFiveStarRatingView.rating = RBS_NSDecimalNumberByString(strValue);
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    RBSFiveStartRatingView *fiveStartRatingView = [[RBSFiveStartRatingView alloc] initWithFrame:CGRectZero];
-    [self.view addSubview:fiveStartRatingView];
-    self.fiveStartRatingView = fiveStartRatingView;
+    RBSFiveStarRatingView *fiveStarRatingView = [[RBSFiveStarRatingView alloc] initWithFrame:CGRectZero];
+    [self.view addSubview:fiveStarRatingView];
+    self.fiveStarRatingView = fiveStarRatingView;
     
     
     
@@ -46,24 +46,24 @@
                                                                              [RBSFiveRatingConditionBreakInfo conditionBreakInfo:RBS_NSDecimalNumberByString(@"1.0") withImageName:@"star4"],
                                                                              ];
     
-    self.customfiveStartRatingView = [[RBSFiveStartRatingView alloc] initWithFrame:CGRectZero
+    self.customFiveStarRatingView = [[RBSFiveStarRatingView alloc] initWithFrame:CGRectZero
                                                          withRequiredImageNameList:requiredImageNameList
                                                       withIncrementConditionBreaks:incrementConditionBreaks];
     
-    [self.view addSubview:self.customfiveStartRatingView];
+    [self.view addSubview:self.customFiveStarRatingView];
 }
 
 - (void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
     
-    [self.fiveStartRatingView sizeToFit];
-    CGRect currentBounds = self.fiveStartRatingView.bounds;
-    self.fiveStartRatingView.frame = CGRectMake(100, 200, CGRectGetWidth(currentBounds), CGRectGetHeight(currentBounds));
+    [self.fiveStarRatingView sizeToFit];
+    CGRect currentBounds = self.fiveStarRatingView.bounds;
+    self.fiveStarRatingView.frame = CGRectMake(100, 200, CGRectGetWidth(currentBounds), CGRectGetHeight(currentBounds));
     
     
     
-    CGSize size = [self.customfiveStartRatingView sizeThatFits:CGSizeMake(CGFLOAT_MAX, 50)];
-    self.customfiveStartRatingView.frame = CGRectMake(100, 300, size.width, size.height);
+    CGSize size = [self.customFiveStarRatingView sizeThatFits:CGSizeMake(CGFLOAT_MAX, 50)];
+    self.customFiveStarRatingView.frame = CGRectMake(100, 300, size.width, size.height);
 }
 
 - (void)didReceiveMemoryWarning
