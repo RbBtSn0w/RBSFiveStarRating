@@ -25,13 +25,12 @@ DerivedData
 *.xcworkspace
 Derived/
 
-# CocoaPods
-Pods/
-Podfile.lock
+# Tuist
+.tuist
+*.xcodeproj
+*.xcworkspace
+Derived/
 
-# Bundler
-.bundle
-
-# Carthage
-Carthage/Checkouts
-Carthage/Build
+# SPM
+.build/
+.swiftpm/

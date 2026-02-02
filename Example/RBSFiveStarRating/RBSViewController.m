@@ -7,7 +7,7 @@
 //
 
 #import "RBSViewController.h"
-@import RBSFiveStarRating;
+#import <RBSFiveStarRating/RBSFiveStartRatingView.h>
 
 @interface RBSViewController ()
 @property (nonatomic, strong) RBSFiveStartRatingView *fiveStartRatingView;

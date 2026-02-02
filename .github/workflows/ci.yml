@@ -5,44 +5,64 @@ on:
     branches: [ main, master, develop ]
   pull_request:
     branches: [ main, master, develop ]
+  workflow_dispatch:
 
 jobs:
-  build-and-test:
-    name: Build and Test
+  spm-check:
+    name: SPM Build & Test
     runs-on: macos-latest
-    
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Build and Test SPM
+        run: |
+          xcodebuild test \
+            -scheme RBSFiveStarRating \
+            -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest' \
+            -enableCodeCoverage YES \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO
+
+  tuist-check:
+    name: Tuist Build & Test
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
       
-    - name: Setup Xcode
-      uses: maxim-lobanov/setup-xcode@v1
-      with:
-        xcode-version: latest-stable
+      - name: Setup Xcode
+        uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: latest-stable
     
-    - name: Install Tuist
-      run: brew install tuist
+      - name: Install Tuist
+        run: pip3 install tuist || brew install tuist
+
+      - name: Generate Project with Tuist
+        run: tuist generate --no-open
         
-    - name: Generate Project with Tuist
-      run: tuist generate --no-open
-        
-    - name: Build Example Project
-      run: |
-        xcodebuild clean build \
-          -workspace RBSFiveStarRating.xcworkspace \
-          -scheme RBSFiveStarRating-Example \
-          -sdk iphonesimulator \
-          -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest' \
-          CODE_SIGN_IDENTITY="" \
-          CODE_SIGNING_REQUIRED=NO
+      - name: Build Example Project (Tuist)
+        run: |
+          xcodebuild clean build \
+            -workspace RBSFiveStarRating.xcworkspace \
+            -scheme RBSFiveStarRating-Example \
+            -sdk iphonesimulator \
+            -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest' \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO
           
-    - name: Run Tests
-      run: |
-        xcodebuild test \
-          -workspace RBSFiveStarRating.xcworkspace \
-          -scheme RBSFiveStarRating-Tests \
-          -sdk iphonesimulator \
-          -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest' \
-          -enableCodeCoverage YES \
-          CODE_SIGN_IDENTITY="" \
-          CODE_SIGNING_REQUIRED=NO
+      - name: Run Tests (Tuist)
+        run: |
+          xcodebuild test \
+            -workspace RBSFiveStarRating.xcworkspace \
+            -scheme RBSFiveStarRating-Tests \
+            -sdk iphonesimulator \
+            -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest' \
+            -enableCodeCoverage YES \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO
