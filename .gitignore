@@ -34,3 +34,4 @@ Derived/
 # SPM
 .build/
 .swiftpm/
+node_modules
