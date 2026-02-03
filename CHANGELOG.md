@@ -1,3 +1,9 @@
+## [1.1.0](https://github.com/RbBtSn0w/RBSFiveStarRating/compare/v1.0.0...v1.1.0) (2026-02-03)
+
+### Features
+
+* add semantic release configuration and workflow ([a94019e](https://github.com/RbBtSn0w/RBSFiveStarRating/commit/a94019e663b367f44972246b0ab375fef49dc10f))
+
 ## 1.0.0 (2026-02-03)
 
 
