@@ -1,7 +1,7 @@
 # RBSFiveStarRating
 
-[![CI Status](https://img.shields.io/github/actions/workflow/status/RbBtSn0w/RBSFiveStarRating/ci.yml?branch=master)](https://github.com/RbBtSn0w/RBSFiveStarRating/actions)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/RbBtSn0w/RBSFiveStarRating/blob/master/LICENSE)
+[![CI Status](https://img.shields.io/github/actions/workflow/status/RbBtSn0w/RBSFiveStarRating/ci.yml?branch=main)](https://github.com/RbBtSn0w/RBSFiveStarRating/actions)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/RbBtSn0w/RBSFiveStarRating/blob/main/LICENSE)
 [![Platform](https://img.shields.io/badge/platform-iOS-lightgrey.svg)](https://github.com/RbBtSn0w/RBSFiveStarRating)
 
 A customizable five-star rating view component for iOS.
