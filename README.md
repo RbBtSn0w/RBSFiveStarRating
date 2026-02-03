@@ -36,9 +36,21 @@ tuist generate
 
 ## Installation
 
-### Swift Package Manager (Coming Soon)
+### Swift Package Manager
 
-Swift Package Manager support is planned for a future release.
+To integrate RBSFiveStarRating into your Xcode project using Swift Package Manager, add it to the dependencies value of your `Package.swift`:
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/RbBtSn0w/RBSFiveStarRating.git", branch: "master")
+]
+```
+
+Or via Xcode:
+
+1. File > Add Packages...
+2. Search for `https://github.com/RbBtSn0w/RBSFiveStarRating.git`
+3. Select "Branch" -> "master"
 
 ### Manual Installation
 
