@@ -1,3 +1,17 @@
+## 1.0.0 (2026-02-03)
+
+
+### Bug Fixes
+
+* **ci:** update iOS simulator destination to iPhone 17 for modern compatibility ([06abc81](https://github.com/RbBtSn0w/RBSFiveStarRating/commit/06abc81469727d88252ccf711d58945921d673c0))
+* **ci:** update simulator to iPhone 16e and add missing -sdk flag for SPM ([f4d4b6d](https://github.com/RbBtSn0w/RBSFiveStarRating/commit/f4d4b6df794230b737a883cd925e51742e5e5c46))
+* **ci:** use homebrew to install tuist ([2d315d5](https://github.com/RbBtSn0w/RBSFiveStarRating/commit/2d315d5452db54b7951bdff5e89b33f4aa2f24c3))
+* compilation errors in SPM and Tuist ([e8ba14c](https://github.com/RbBtSn0w/RBSFiveStarRating/commit/e8ba14ceff93e97886b15778838760cf93dc8817))
+* remove redundant framework dependency in tests ([26c960c](https://github.com/RbBtSn0w/RBSFiveStarRating/commit/26c960cd64fa1bd848e61c30e6512143a3202aeb))
+* rename properties and variables in RBSViewController to fix Star typo ([a1cb2cf](https://github.com/RbBtSn0w/RBSFiveStarRating/commit/a1cb2cf0d4914486bdb7aa263012db3d015167e8))
+* resolve code review issues and rename class to fix typo ([8e93cb2](https://github.com/RbBtSn0w/RBSFiveStarRating/commit/8e93cb26206360ce8790e813cea34ba089a1c077))
+* Tuist project configuration ([58008c6](https://github.com/RbBtSn0w/RBSFiveStarRating/commit/58008c65ecd322d8352960d58096485103f532d6))
+
 # Changelog
 
 All notable changes to this project will be documented in this file.
