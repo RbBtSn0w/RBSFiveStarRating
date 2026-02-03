@@ -80,10 +80,33 @@ xcodebuild test \
 
 ## Commit Messages
 
-* Use the present tense ("Add feature" not "Added feature")
-* Use the imperative mood ("Move cursor to..." not "Moves cursor to...")
-* Limit the first line to 72 characters or less
-* Reference issues and pull requests liberally after the first line
+This project uses [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) to automate the release process. Please format your commit messages as follows:
+
+    <type>(<scope>): <subject>
+
+    <body>
+
+    <footer>
+
+### Types
+
+* **feat**: A new feature
+* **fix**: A bug fix
+* **docs**: Documentation only changes
+* **style**: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+* **refactor**: A code change that neither fixes a bug nor adds a feature
+* **perf**: A code change that improves performance
+* **test**: Adding missing tests or correcting existing tests
+* **build**: Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
+* **ci**: Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)
+* **chore**: Other changes that don't modify src or test files
+* **revert**: Reverts a previous commit
+
+### Examples
+
+* `feat(auth): add login functionality`
+* `fix(button): correct click handler`
+* `docs: update readme`
 
 ## License
 
